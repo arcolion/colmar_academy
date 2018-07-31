@@ -3,12 +3,16 @@
 html {
   font-family: 'Montserrat', 'Helvetica', 'sans-serif';
   font-size: 16px;
-  box-sizing: border-box;
 }
 
 body {
   max-width: 1280px;
   margin: auto;
+  background-color: hsl(84, 50%, 92%);
+}
+
+* {
+  box-sizing: border-box;
 }
 
 a {
@@ -39,6 +43,7 @@ img {
 
 video {
   width: 100%;
+  border-radius: 4px;
 }
 
 .container {
@@ -53,7 +58,7 @@ video {
 .container .right_row {
   width: 40%;
   display: flex;
-  margin-left: 1.5rem;
+  padding-left: 1.5rem;
 }
 
 .flex_row {
@@ -63,15 +68,15 @@ video {
 .flex_column {
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 .mobile {
   display: none;
 }
 
-.gray_background {
-  background-color: lightgray;
+.green_background {
+  background-color: HSL(143, 61%, 73%);
+  border-radius: 5px;
 }
 
 /* Desktop Header */
@@ -90,6 +95,15 @@ header {
 .logo a {
   display: flex;
   align-items: center;
+  transition: font-size 1s ease;
+}
+
+.logo a:hover {
+  font-size: 1.2rem;
+}
+
+.logo_dark {
+  font-weight: bold;
 }
 
 nav {
@@ -97,11 +111,19 @@ nav {
   flex-wrap: wrap;
   min-width: 30rem;
   justify-content: space-between;
+  font-weight: bold;
 }
 
+nav a {
+  padding: 0 5px 3px 5px;
+  transition: border-bottom 0.5s ease;
+}
+
+nav a:hover {
+  border-bottom: 5px solid rgba(36, 0, 0, 0.2);
+}
 
 /* Banner */
-
 
 .banner h1 {
   padding: 1rem 0rem;
@@ -111,25 +133,51 @@ nav {
   padding: 1rem 0rem 1.5rem 0rem;
 }
 
+.banner img {
+  border-radius: 4px;
+}
+
 .banner .learn_daily {
-  width: 30%;
+  width: 35%;
 }
 
 .banner .start_here_button {
   width: 100%;
-  line-height: 3;
   background-color: black;
   text-align: center;
+  border-radius: 10px;
+  line-height: 1.2;
 }
 
 .start_here_button a {
   color: white;
 }
 
+.start_here_button h3 {
+  padding: 0.5rem 0;
+}
 
+.banner .learn_daily .start_here_button h3  {
+  transition: background-color 0.3s ease;
+}
+
+.banner .learn_daily .start_here_button h3:hover  {
+  background-color: hsl(210, 91%, 22%);
+  border-radius: 10px;
+}
+
+.banner .learn_daily .start_here_button h3:active  {
+  font-size: 1rem;
+    line-height: 1.404rem;
+}
 
 
 /* Information */
+
+
+.info img {
+  border-radius: 4px;
+}
 
 .daily_motto {
   line-height: 1.2;
@@ -154,24 +202,25 @@ nav {
   margin-top: -1rem;
 }
 
-.item .left_row {
-  height: auto;
+.info .from_us a:hover {
+  color: hsl(210, 91%, 22%);
+  font-weight: bold;
 }
 
-.item .right_row {
+.info .from_us .item .left_row {
+  align-self: flex-start;
+}
+
+.info .from_us .item .right_row {
   width: 100%;
 }
 
-.info .from_us a {
-  color: blue;
-}
-
-.item {
+.info .from_us .item {
   align-items: center;
-  padding: 1rem 0 1rem 1rem;
+  padding: 1rem 1rem 1rem 1rem;
 }
 
-.info .from_us .content_text {
+.info .from_us .item .right_row .content_text {
   padding: 0.5rem 0rem;
   line-height: 1.5;
 }
@@ -183,13 +232,16 @@ nav {
   width: 100%;
 }
 
+.start_learning .container {
+  padding-left: 4.5rem;
+  padding-right: 4.5rem;
+}
+
 .start_learning h1 {
   text-align: center;
 }
 
 .start_learning .course_list {
-  margin-left: 3rem;
-  margin-right: 3rem;
   flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 2rem;
@@ -199,6 +251,7 @@ nav {
   width: 30%;
   margin-bottom: 2rem;
   overflow: hidden;
+  border-radius: 5px;
 }
 
 .start_learning .course_list .course .course_image img {
@@ -227,26 +280,44 @@ nav {
   line-height: 1.5;
 }
 
+.thesis img {
+  border-radius: 5px;
+}
+
 .thesis h1 {
   text-align: center;
   padding-bottom: 2rem;
 }
 
-.thesis h3 {
-  padding: 1.5rem 0rem 0.5rem 0rem;
+.thesis .left_row h3 {
+  padding: 1rem 0rem 0.5rem 0rem;
 }
 
-.thesis_right {
+.thesis .thesis_right {
   justify-content: flex-start;
   margin-top: -1rem;
 }
 
+.thesis .thesis_right .item {
+  align-items: center;
+  padding: 1rem 1rem 1rem 1rem;
+}
+
+.thesis .thesis_right .item .left_row {
+  align-self: flex-start;
+}
+
+.thesis .thesis_right .item .right_row {
+  width: 100%;
+}
 
 /* Footer */
 
-footer {
+footer.container {
   justify-content: space-between;
-  margin: 1rem 1.5rem;
+  margin: 1rem 0rem;
+  padding-right: 1rem;
+  border-top: 2px solid hsl(210, 91%, 22%);
 }
 
 .terms_and_privacy {
@@ -298,7 +369,7 @@ footer {
   }
 
   .container .right_row {
-    width: 95%;
+    width: 100%;
     margin: 0;
     padding: 2rem 1rem;
     overflow: hidden;
@@ -323,6 +394,10 @@ footer {
     display: inline-block;
   }
 
+  nav a {
+    padding: 0;
+  }
+
   nav li img {
     width: 120%;
     height: 120%;
@@ -332,36 +407,49 @@ footer {
 
   .banner .container {
     flex-direction: column;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
   }
 
-  .learn_daily {
-    justify-content: center;
-}
+  .banner .container .learn_daily {
+    padding: 1rem 1rem 2rem 1rem;
+  }
 
-  .start_here_button {
-    width: inherit;
-    align-self: center;
+  .banner .learn_daily .start_here_button h3:active  {
+    font-size: 1.17rem;
+    line-height: 1.7rem;
   }
 
 /* Info Session - Mobile  */
 
-  .info .item {
+  .from_us.right_row {
+    padding: 0;
+    width: 100%;
+  }
+
+  .info .from_us .item {
     flex-direction: column;
+    padding: 1rem 1rem 2rem 1rem;
   }
 
   .info .item:last-child {
-    background-color: white;
+    background-color: hsl(84, 50%, 92%);
   }
 
   /* Start Learning - Mobile */
 
   .start_learning {
-    background-color: white;
+    background-color: hsl(84, 50%, 92%);
+  }
+
+  .start_learning .container {
+    padding: 2rem 1rem;
   }
 
   .course_list {
     flex-direction: column;
-    padding: 2rem 1rem;
+    padding: 2rem 0rem;
   }
 
   .start_learning .course_list .course {
@@ -373,6 +461,7 @@ footer {
     width: 100%;
     margin: 0;
     padding: 0;
+    background-color: hsl(84, 50%, 92%);
   }
 
   .course h2 {
@@ -381,6 +470,12 @@ footer {
     padding: 1.5rem 1rem;
     height: 100%;
     margin-bottom: 0.5rem;
+    border-radius: 5px;
+    transition: opacity 0.5s ease;
+  }
+
+  .course h2:hover {
+    opacity: 0.5;
   }
 
   /* Thesis - Mobile */
@@ -389,10 +484,16 @@ footer {
     flex-direction: column;
   }
 
+  .thesis h1 {
+    padding-top: 2rem;
+  }
+
   /* Footer - Mobile */
 
   footer.flex_row {
     flex-direction: column;
+    text-align: center;
+    padding-top: 1rem;
   }
 
 

@@ -31,24 +31,24 @@
     </header>
     <header class="mobile">
       <nav>
-        <ul class="flex_row">
-          <li><a href="#"><img src="resources/images/ic-logo.svg" alt=""></a></li>
-          <li><a href="#"><img src="resources/images/ic-on-campus.svg" alt=""></a></li>
-          <li><a href="#"><img src="resources/images/ic-online.svg" alt=""></a></li>
-          <li><a href="#"><img src="resources/images/ic-login.svg" alt=""></a></li>
+        <ul class="flex_row" role="presentation">
+          <li><a href="#"><img src="resources/images/ic-logo.svg" alt="Logo of the company and link to landing page"></a></li>
+          <li><a href="#"><img src="resources/images/ic-on-campus.svg" alt="Link to on campus courses"></a></li>
+          <li><a href="#"><img src="resources/images/ic-online.svg" alt="Link to online courses"></a></li>
+          <li><a href="#"><img src="resources/images/ic-login.svg" alt="Sign in"></a></li>
         </ul>
       </nav>
     </header>
-    <div class="banner gray_background">
+    <div class="banner green_background">
       <div class="container flex_row">
         <div class="left_row">
-          <img src="resources/images/banner.jpg" alt="">
+          <img src="resources/images/banner.jpg" alt="People reading book and workin on a desk outside." >
         </div>
         <div class="learn_daily right_row flex_column">
           <h1>Learn something new everyday</h1>
-          <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+          <h2 role="presentation">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
           <div class="start_here_button">
-            <h3><a href="#">Start here</a></h3>
+            <a href="#"><h3>Start here</h3></a>
           </div>
         </div>
       </div>
@@ -56,10 +56,10 @@
     <main>
       <div class="info container flex_row">
         <div class="daily_motto left_row desktop">
-          <img src="resources/images/information-main.jpg" alt="">
+          <img src="resources/images/information-main.jpg" alt="A man reading a book.">
           <h2>It doesn't hurt to keep practicing</h2>
-          <p>"Curabitur vitae libero in ipsum porttitor consequat. Aliquam et commodo lectus, nec consequate neque. Sed non accumsan urna. Phasellus sed consequat ex. Etiam eget magna laoreet, efficitur dolor consequat, tristique ligula."</p>
-          <p class="credit">Emmanual, Sr Stratagist at Hiring.com</p>
+          <p role="presentation">"Curabitur vitae libero in ipsum porttitor consequat. Aliquam et commodo lectus, nec consequate neque. Sed non accumsan urna. Phasellus sed consequat ex. Etiam eget magna laoreet, efficitur dolor consequat, tristique ligula."</p>
+          <p class="credit" aria-label="Quoted from:">Emmanual, Sr Stratagist at Hiring.com</p>
         </div>
         <div class="from_us right_row flex_column">
           <div class="item flex_row">
@@ -69,8 +69,8 @@
             </div>
             <div class="right_row flex_column">
               <h3>Orientation date</h3>
-              <p class="content_text">Tues 10/11 & Wed 10/12: 8am-3pm</p>
-              <p class="read_more"><a href="#">Read more</a></p>
+              <p class="content_text" role="presentation">Tues 10/11 & Wed 10/12: 8am-3pm</p>
+              <p class="read_more" role="presentation"><a href="#">Read more</a></p>
             </div>
           </div>
           <div class="item flex_row">
@@ -80,86 +80,98 @@
             </div>
             <div class="right_row flex_column">
               <h3>Our campus</h3>
-              <p class="content_text">Find which campus is close by you</p>
+              <p class="content_text" role="presentation">Find which campus is close by you</p>
               <p class="read_more"><a href="#">Read more</a></p>
             </div>
           </div>
-          <div class="item flex_row gray_background">
+          <div class="item flex_row green_background">
             <div class="left_row">
               <img src="resources/images/information-guest-lecture.jpg" alt="" class="desktop">
               <img src="resources/images/information-guest-lecture-mobile.jpg" alt="" class="mobile">
             </div>
             <div class="right_row flex_column">
               <h3>Special gueast lecture</h3>
-              <p class="content_text">Join a keynote with Oliver Sack about music in medical treatment</p>
+              <p class="content_text" role="presentation">Join a keynote with Oliver Sack about music in medical treatment</p>
               <p class="read_more"><a href="#">Read more</a></p>
             </div>
           </div>
         </div>
       </div>
-      <div class="start_learning gray_background">
+      <div class="start_learning green_background">
         <div class="container">
           <h1>Start Learning</h1>
           <div class="course_list flex_row">
-            <div class="course flex_column">
-              <div class="course_image desktop">
-                <img src="resources/images/course-software.jpg" alt="">
-              </div>
-              <div class="course_info">
-                <h2>Software engineering</h2>
-                <h3 class="desktop">COURSES</h3>
-                <p class="desktop">Web Development, Mobile Development, iOT, APIs</p>
-              </div>
+            <div class="course">
+              <a href="#">
+                <div class="course_image desktop">
+                  <img src="resources/images/course-software.jpg" alt="">
+                </div>
+                <div class="course_info">
+                  <h2>Software engineering</h2>
+                  <h3 class="desktop">COURSES</h3>
+                  <p class="desktop" role="presentation">Web Development, Mobile Development, iOT, APIs</p>
+                </div>
+              </a>
             </div>
             <div class="course">
-              <div class="course_image desktop">
-                <img src="resources/images/course-computer-art.jpg" alt="">
-              </div>
-              <div class="course_info">
-                <h2>Computer art</h2>
-                <h3 class="desktop">COURSES</h3>
-                <p class="desktop">Imagine & Design, Web Design, Motion Graphics & Visual Effects, Computer Animation</p>
-              </div>
+              <a href="#">
+                <div class="course_image desktop">
+                  <img src="resources/images/course-computer-art.jpg" alt="">
+                </div>
+                <div class="course_info">
+                  <h2>Computer art</h2>
+                  <h3 class="desktop">COURSES</h3>
+                  <p class="desktop" role="presentation">Imagine & Design, Web Design, Motion Graphics & Visual Effects, Computer Animation</p>
+                </div>
+              </a>
             </div>
             <div class="course">
-              <div class="course_image desktop">
-                <img src="resources/images/course-design.jpg" alt="">
-              </div>
-              <div class="course_info">
-                <h2>Design</h2>
-                <h3 class="desktop">COURSES</h3>
-                <p class="desktop">User Experience Design, User Research, Visual Design</p>
-              </div>
+              <a href="#">
+                <div class="course_image desktop">
+                  <img src="resources/images/course-design.jpg" alt="">
+                </div>
+                <div class="course_info">
+                  <h2>Design</h2>
+                  <h3 class="desktop">COURSES</h3>
+                  <p class="desktop" role="presentation">User Experience Design, User Research, Visual Design</p>
+                </div>
+              </a>
             </div>
             <div class="course">
-              <div class="course_image desktop">
-                <img src="resources/images/course-data.jpg" alt="">
-              </div>
-              <div class="course_info">
-                <h2>Data</h2>
-                <h3 class="desktop">COURSES</h3>
-                <p class="desktop">Data Science, Big Data, SQL, Data Visualization</p>
-              </div>
+              <a href="#">
+                <div class="course_image desktop">
+                  <img src="resources/images/course-data.jpg" alt="">
+                </div>
+                <div class="course_info">
+                  <h2>Data</h2>
+                  <h3 class="desktop">COURSES</h3>
+                  <p class="desktop" role="presentation">Data Science, Big Data, SQL, Data Visualization</p>
+                </div>
+              </a>
             </div>
             <div class="course">
-              <div class="course_image desktop">
-                <img src="resources/images/course-business.jpg" alt="">
-              </div>
-              <div class="course_info">
-                <h2>Business</h2>
-                <h3 class="desktop">COURSES</h3>
-                <p class="desktop">Product Development, Business Development, Startup</p>
-              </div>
+              <a href="#">
+                <div class="course_image desktop">
+                  <img src="resources/images/course-business.jpg" alt="">
+                </div>
+                <div class="course_info">
+                  <h2>Business</h2>
+                  <h3 class="desktop">COURSES</h3>
+                  <p class="desktop" role="presentation">Product Development, Business Development, Startup</p>
+                </div>
+              </a>
             </div>
             <div class="course">
-              <div class="course_image desktop">
-                <img src="resources/images/course-marketing.jpg" alt="">
-              </div>
-              <div class="course_info">
-                <h2>Marketing</h2>
-                <h3 class="desktop">COURSES</h3>
-                <p class="desktop">Analytics, Content Marketing, Mobile Marketing</p>
-              </div>
+              <a href="#">
+                <div class="course_image desktop">
+                  <img src="resources/images/course-marketing.jpg" alt="">
+                </div>
+                <div class="course_info">
+                  <h2>Marketing</h2>
+                  <h3 class="desktop">COURSES</h3>
+                  <p class="desktop" role="presentation">Analytics, Content Marketing, Mobile Marketing</p>
+                </div>
+              </a>
             </div>
           </div>
         </div>
@@ -172,7 +184,7 @@
               <source src="resources/videos/thesis.mp4" type="video/mp4">Your browser does not support the video tag.
             </video>
             <h3 class="desktop">Reimagine urban</h3>
-            <p class="desktop">"Curabitur vitae libero in ipsum porttitor consequat. Aliquam et commodo lectus, nec consequat neque.Sed non accumsan urna. Phasellus sed consequat ex. Etiam eget magna laoreet, efficitur dolor consequat, tristique ligula."</p>
+            <p class="desktop" role="presentation">"Curabitur vitae libero in ipsum porttitor consequat. Aliquam et commodo lectus, nec consequat neque.Sed non accumsan urna. Phasellus sed consequat ex. Etiam eget magna laoreet, efficitur dolor consequat, tristique ligula."</p>
           </div>
           <div class="thesis_right right_row flex_column">
             <div class="item flex_row desktop">
@@ -180,8 +192,10 @@
                 <img src="resources/images/thesis-fisma.jpg" alt="">
               </div>
               <div class="right_row flex_column">
-                <h3>Fisma: Design and Prototype</h3>
-                <p>Designer showcase of new prototype product</p>
+                <a href="#">
+                  <h3>Fisma: Design and Prototype</h3>
+                  <p role="presentation">Designer showcase of new prototype product</p>
+                </a>
               </div>
             </div>
             <div class="item flex_row desktop">
@@ -189,8 +203,10 @@
                 <img src="resources/images/thesis-now-and-then.jpg" alt="">
               </div>
               <div class="right_row flex_column">
-                <h3>Fisma: Design and Prototype</h3>
-                <p>Designer showcase of new prototype product</p>
+                <a href="#">
+                  <h3>Fisma: Design and Prototype</h3>
+                  <p role="presentation">Designer showcase of new prototype product</p>
+                </a>
               </div>
             </div>
           </div>
@@ -203,10 +219,10 @@
       </div>
       <div class="terms_and_privacy right_row flex_row">
         <div class="terms desktop">
-            <span>Terms</span>
+            <a href="#"><span>Terms</span></a>
         </div>
         <div class="privacy desktop">
-            <span>Privacy</span>
+            <a href="#"><span>Privacy</span></a>
         </div>
       </div>
     </footer>
